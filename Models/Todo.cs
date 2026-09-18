@@ -15,5 +15,14 @@ namespace Models
         public DateTime CreatedAt { get; set; }
 
         public bool Done { get; set; }
+
+        public override string  ToString()
+        {
+            return  $" id               : {this.Id} \n" +
+                    $" title            : {this.Title}\n" +
+                    $" description      : {this.Description}\n" +
+                    $" DateDeCréation   : {this.CreatedAt.ToShortDateString()}\n" +
+                    $" Terminé          : {this.Done}\n";
+        }
     }
 }
