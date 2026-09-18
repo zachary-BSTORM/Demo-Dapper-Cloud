@@ -14,8 +14,15 @@ namespace Dal_Demo_Dapper
         {
             using SqlConnection connection = new SqlConnection(connectionString);
 
-            return connection.Query<Todo>("SELECT * FROM Todo");
+            return connection.Query<Todo>("SELECT id,title,description,CreatedAt,Done FROM Todo");
 
+        }
+
+        public Todo? GetById(int id)
+        {
+            using SqlConnection connection = new SqlConnection(connectionString);
+
+            return connection.QueryFirstOrDefault<Todo>($"SELECT id,title,description,CreatedAt,Done FROM Todo WHERE id = @Id", new {Id  = id});
         }
         
     }
