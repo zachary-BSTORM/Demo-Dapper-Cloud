@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Éléments de solution/">
+    <File Path="db.sql" />
+  </Folder>
   <Project Path="Console-Dapper/Console-Dapper.csproj" />
   <Project Path="Dal-Demo-Dapper/Dal-Demo-Dapper.csproj" />
   <Project Path="Models/Models.csproj" />
